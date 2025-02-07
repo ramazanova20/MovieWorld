@@ -5,9 +5,11 @@ async function getAllData() {
   return res.data;
 }
 async function getMovieData() {
-    const res = await axios.get("http://localhost:5000/movie");
+    const res = await axios.get("https://moviedata-xi.vercel.app/movie");
     return res.data; // ✅ Boş array qaytar ki, səhv olmasın
   }
+
+
   async function getInfoById(id) {
     const res = await axios.get(`https://api.tvmaze.com/shows/${id}`);
     return res.data;
@@ -19,7 +21,7 @@ async function getMovieData() {
   }
   async function getMovieById(id) {
    
-      const res = await axios.get(`http://localhost:5000/movie/${id}`);
+      const res = await axios.get(`https://moviedata-xi.vercel.app/movie/${id}`);
       return res.data;
    
   }

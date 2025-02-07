@@ -79,7 +79,6 @@ const CarusellShows = () => {
   return (
     <div className="bg-[#800000]">
     <div className="container lg:max-w-[1280px] mx-auto p-3">
-      <h1>fhdsfdsjfkzfmi jofi cvofqof</h1>
       {/* 7+ Reytinqli Filmlər */}
       <div>
         <h2 className="text-center text-2xl font-bold mb-6 flex justify-between">
