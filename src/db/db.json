@@ -1,0 +1,415 @@
+{
+    "movie": [
+        {
+            "title": "Killer Zaddy",
+            "title_english": "Killer Zaddy",
+            "title_long": "Killer Zaddy (2023)",
+            "slug": "killer-zaddy-2023",
+            "year": 2023,
+            "rating": 5.9,
+            "runtime": 0,
+            "language": "English",
+            "background_image": "https://yts.mx/assets/images/movies/killer_zaddy_2023/background.jpg",
+            "background_image_original": "https://yts.mx/assets/images/movies/killer_zaddy_2023/background.jpg",
+            "small_cover_image": "https://yts.mx/assets/images/movies/killer_zaddy_2023/small-cover.jpg",
+            "medium_cover_image": "https://yts.mx/assets/images/movies/killer_zaddy_2023/medium-cover.jpg",
+            "large_cover_image": "https://yts.mx/assets/images/movies/killer_zaddy_2023/large-cover.jpg",
+            "id": "1",
+            "type": "movie",
+            "genres": [
+            "Drama"
+            ]
+        },
+        {
+            "title": "Just Like a Christmas Movie",
+            "title_english": "Just Like a Christmas Movie",
+            "title_long": "Just Like a Christmas Movie (2023)",
+            "slug": "just-like-a-christmas-movie-2023",
+            "year": 2023,
+            "rating": 5.2,
+            "runtime": 89,
+            "language": "English",
+            "background_image": "https://yts.mx/assets/images/movies/just_like_a_christmas_movie_2023/background.jpg",
+            "background_image_original": "https://yts.mx/assets/images/movies/just_like_a_christmas_movie_2023/background.jpg",
+            "small_cover_image": "https://yts.mx/assets/images/movies/just_like_a_christmas_movie_2023/small-cover.jpg",
+            "medium_cover_image": "https://yts.mx/assets/images/movies/just_like_a_christmas_movie_2023/medium-cover.jpg",
+            "large_cover_image": "https://yts.mx/assets/images/movies/just_like_a_christmas_movie_2023/large-cover.jpg",
+            "id": "2",
+            "type": "movie",
+            "genres": [
+            "Drama",
+            "Romance",
+            "Western"
+            ]
+        },
+        {
+            "title": "Homeboys",
+            "title_english": "Homeboys",
+            "title_long": "Homeboys (2023)",
+            "slug": "homeboys-2023",
+            "year": 2023,
+            "rating": 8.6,
+            "runtime": 90,
+            "language": "English",
+            "background_image": "https://yts.mx/assets/images/movies/homeboys_2023/background.jpg",
+            "background_image_original": "https://yts.mx/assets/images/movies/homeboys_2023/background.jpg",
+            "small_cover_image": "https://yts.mx/assets/images/movies/homeboys_2023/small-cover.jpg",
+            "medium_cover_image": "https://yts.mx/assets/images/movies/homeboys_2023/medium-cover.jpg",
+            "large_cover_image": "https://yts.mx/assets/images/movies/homeboys_2023/large-cover.jpg",
+            "id": "3",
+            "type": "movie",
+            "genres": [
+            "Comedy"
+            ]
+        },
+        {
+            "title": "Holidays at the Ranch",
+            "title_english": "Holidays at the Ranch",
+            "title_long": "Holidays at the Ranch (2023)",
+            "slug": "holidays-at-the-ranch-2023",
+            "year": 2023,
+            "rating": 3,
+            "runtime": 0,
+            "language": "English",
+            "background_image": "https://yts.mx/assets/images/movies/holidays_at_the_ranch_2023/background.jpg",
+            "background_image_original": "https://yts.mx/assets/images/movies/holidays_at_the_ranch_2023/background.jpg",
+            "small_cover_image": "https://yts.mx/assets/images/movies/holidays_at_the_ranch_2023/small-cover.jpg",
+            "medium_cover_image": "https://yts.mx/assets/images/movies/holidays_at_the_ranch_2023/medium-cover.jpg",
+            "large_cover_image": "https://yts.mx/assets/images/movies/holidays_at_the_ranch_2023/large-cover.jpg",
+            "id": "4",
+            "type": "movie",
+            "genres": [
+            "Drama",
+            "Romance"
+            ]
+        },
+        {
+            "title": "Giving Thanks",
+            "title_english": "Giving Thanks",
+            "title_long": "Giving Thanks (2023)",
+            "slug": "giving-thanks-2023",
+            "year": 2023,
+            "rating": 6,
+            "runtime": 0,
+            "language": "English",
+            "background_image": "https://yts.mx/assets/images/movies/giving_thanks_2023/background.jpg",
+            "background_image_original": "https://yts.mx/assets/images/movies/giving_thanks_2023/background.jpg",
+            "small_cover_image": "https://yts.mx/assets/images/movies/giving_thanks_2023/small-cover.jpg",
+            "medium_cover_image": "https://yts.mx/assets/images/movies/giving_thanks_2023/medium-cover.jpg",
+            "large_cover_image": "https://yts.mx/assets/images/movies/giving_thanks_2023/large-cover.jpg",
+            "id": "5",
+            "type": "movie",
+            "genres": [
+            "Drama"
+            ]
+        },
+        {
+            "title": "For the Love of Christmas 2: A Heart for the Holidays",
+            "title_english": "For the Love of Christmas 2: A Heart for the Holidays",
+            "title_long": "For the Love of Christmas 2: A Heart for the Holidays (2023)",
+            "slug": "for-the-love-of-christmas-2-a-heart-for-the-holidays-2023",
+            "year": 2023,
+            "rating": 7,
+            "runtime": 0,
+            "language": "English",
+            "background_image": "https://yts.mx/assets/images/movies/for_the_love_of_christmas_2_a_heart_for_the_holidays_2023/background.jpg",
+            "background_image_original": "https://yts.mx/assets/images/movies/for_the_love_of_christmas_2_a_heart_for_the_holidays_2023/background.jpg",
+            "small_cover_image": "https://yts.mx/assets/images/movies/for_the_love_of_christmas_2_a_heart_for_the_holidays_2023/small-cover.jpg",
+            "medium_cover_image": "https://yts.mx/assets/images/movies/for_the_love_of_christmas_2_a_heart_for_the_holidays_2023/medium-cover.jpg",
+            "large_cover_image": "https://yts.mx/assets/images/movies/for_the_love_of_christmas_2_a_heart_for_the_holidays_2023/large-cover.jpg",
+            "id": "6",
+            "type": "movie",
+            "genres": [
+            "Drama"
+            ]
+        },
+        {
+            "title": "Da Neighborhood Dopemane",
+            "title_english": "Da Neighborhood Dopemane",
+            "title_long": "Da Neighborhood Dopemane (2023)",
+            "slug": "da-neighborhood-dopemane-2023",
+            "year": 2023,
+            "rating": 4.6,
+            "runtime": 120,
+            "language": "English",
+            "background_image": "https://yts.mx/assets/images/movies/da_neighborhood_dopemane_2023/background.jpg",
+            "background_image_original": "https://yts.mx/assets/images/movies/da_neighborhood_dopemane_2023/background.jpg",
+            "small_cover_image": "https://yts.mx/assets/images/movies/da_neighborhood_dopemane_2023/small-cover.jpg",
+            "medium_cover_image": "https://yts.mx/assets/images/movies/da_neighborhood_dopemane_2023/medium-cover.jpg",
+            "large_cover_image": "https://yts.mx/assets/images/movies/da_neighborhood_dopemane_2023/large-cover.jpg",
+            "id": "7",
+            "type": "movie",
+            "genres": [
+            "Drama"
+            ]
+        },
+        {
+            "title": "Creating Christmas",
+            "title_english": "Creating Christmas",
+            "title_long": "Creating Christmas (2023)",
+            "slug": "creating-christmas-2023",
+            "year": 2023,
+            "rating": 5.9,
+            "runtime": 87,
+            "language": "English",
+            "background_image": "https://yts.mx/assets/images/movies/creating_christmas_2023/background.jpg",
+            "background_image_original": "https://yts.mx/assets/images/movies/creating_christmas_2023/background.jpg",
+            "small_cover_image": "https://yts.mx/assets/images/movies/creating_christmas_2023/small-cover.jpg",
+            "medium_cover_image": "https://yts.mx/assets/images/movies/creating_christmas_2023/medium-cover.jpg",
+            "large_cover_image": "https://yts.mx/assets/images/movies/creating_christmas_2023/large-cover.jpg",
+            "id": "8",
+            "type": "movie",
+            "genres": [
+            "Action",
+            "Adventure"
+            ]
+        },
+        {
+            "title": "Choppa City Queens",
+            "title_english": "Choppa City Queens",
+            "title_long": "Choppa City Queens (2023)",
+            "slug": "choppa-city-queens-2023",
+            "year": 2023,
+            "rating": 5.8,
+            "runtime": 93,
+            "language": "English",
+            "background_image": "https://yts.mx/assets/images/movies/choppa_city_queens_2023/background.jpg",
+            "background_image_original": "https://yts.mx/assets/images/movies/choppa_city_queens_2023/background.jpg",
+            "small_cover_image": "https://yts.mx/assets/images/movies/choppa_city_queens_2023/small-cover.jpg",
+            "medium_cover_image": "https://yts.mx/assets/images/movies/choppa_city_queens_2023/medium-cover.jpg",
+            "large_cover_image": "https://yts.mx/assets/images/movies/choppa_city_queens_2023/large-cover.jpg",
+            "id": "9",
+            "type": "movie",
+            "genres": [
+            "Drama"
+            ]
+        },
+        {
+            "title": "American Girl",
+            "title_english": "American Girl",
+            "title_long": "American Girl (2023)",
+            "slug": "american-girl-2023",
+            "year": 2023,
+            "rating": 8.6,
+            "runtime": 0,
+            "language": "English",
+            "background_image": "https://yts.mx/assets/images/movies/american_girl_2023/background.jpg",
+            "background_image_original": "https://yts.mx/assets/images/movies/american_girl_2023/background.jpg",
+            "small_cover_image": "https://yts.mx/assets/images/movies/american_girl_2023/small-cover.jpg",
+            "medium_cover_image": "https://yts.mx/assets/images/movies/american_girl_2023/medium-cover.jpg",
+            "large_cover_image": "https://yts.mx/assets/images/movies/american_girl_2023/large-cover.jpg",
+            "id": "10",
+            "type": "movie",
+            "genres": [
+            "Espionage"
+            ]
+        },
+        {
+            "title": "Kinda Pregnant",
+            "title_english": "Kinda Pregnant",
+            "title_long": "Kinda Pregnant (2025)",
+            "slug": "kinda-pregnant-2025",
+            "year": 2025,
+            "rating": 0,
+            "runtime": 97,
+            "language": "English",
+            "background_image": "https://yts.mx/assets/images/movies/kinda_pregnant_2025/background.jpg",
+            "background_image_original": "https://yts.mx/assets/images/movies/kinda_pregnant_2025/background.jpg",
+            "small_cover_image": "https://yts.mx/assets/images/movies/kinda_pregnant_2025/small-cover.jpg",
+            "medium_cover_image": "https://yts.mx/assets/images/movies/kinda_pregnant_2025/medium-cover.jpg",
+            "large_cover_image": "https://yts.mx/assets/images/movies/kinda_pregnant_2025/large-cover.jpg",
+            "id": "11",
+            "type": "movie",
+            "genres": [
+            "Horror",
+            "Thriller"
+            ]
+        },
+        {
+            "title": "Morse and the Last Endeavour",
+            "title_english": "Morse and the Last Endeavour",
+            "title_long": "Morse and the Last Endeavour (2023)",
+            "slug": "morse-and-the-last-endeavour-2023",
+            "year": 2023,
+            "rating": 8.6,
+            "runtime": 82,
+            "language": "English",
+            "background_image": "https://yts.mx/assets/images/movies/morse_and_the_last_endeavour_2023/background.jpg",
+            "background_image_original": "https://yts.mx/assets/images/movies/morse_and_the_last_endeavour_2023/background.jpg",
+            "small_cover_image": "https://yts.mx/assets/images/movies/morse_and_the_last_endeavour_2023/small-cover.jpg",
+            "medium_cover_image": "https://yts.mx/assets/images/movies/morse_and_the_last_endeavour_2023/medium-cover.jpg",
+            "large_cover_image": "https://yts.mx/assets/images/movies/morse_and_the_last_endeavour_2023/large-cover.jpg",
+            "id": "12",
+            "type": "movie",
+            "genres": [
+            "Adventure",
+            "Crime",
+            "Drama",
+            "Thriller"
+            ]
+        },
+        {
+            "title": "Terrornet",
+            "title_english": "Terrornet",
+            "title_long": "Terrornet (2024)",
+            "slug": "terrornet-2024",
+            "year": 2024,
+            "rating": 4.5,
+            "runtime": 88,
+            "language": "English",
+            "background_image": "https://yts.mx/assets/images/movies/terrornet_2024/background.jpg",
+            "background_image_original": "https://yts.mx/assets/images/movies/terrornet_2024/background.jpg",
+            "small_cover_image": "https://yts.mx/assets/images/movies/terrornet_2024/small-cover.jpg",
+            "medium_cover_image": "https://yts.mx/assets/images/movies/terrornet_2024/medium-cover.jpg",
+            "large_cover_image": "https://yts.mx/assets/images/movies/terrornet_2024/large-cover.jpg",
+            "id": "13",
+            "type": "movie",
+            "genres": [
+            "Comedy"
+            ]
+        },
+        {
+            "title": "Slide",
+            "title_english": "Slide",
+            "title_long": "Slide (2025)",
+            "slug": "slide-2025",
+            "year": 2025,
+            "rating": 6.3,
+            "runtime": 0,
+            "language": "English",
+            "background_image": "https://yts.mx/assets/images/movies/slide_2025/background.jpg",
+            "background_image_original": "https://yts.mx/assets/images/movies/slide_2025/background.jpg",
+            "small_cover_image": "https://yts.mx/assets/images/movies/slide_2025/small-cover.jpg",
+            "medium_cover_image": "https://yts.mx/assets/images/movies/slide_2025/medium-cover.jpg",
+            "large_cover_image": "https://yts.mx/assets/images/movies/slide_2025/large-cover.jpg",
+            "id": "14",
+            "type": "movie",
+            "genres": [
+            "Comedy",
+            "Romance"
+            ]
+        },
+        {
+            "title": "Ext. Masina. Noapte",
+            "title_english": "Ext. Masina. Noapte",
+            "title_long": "Ext. Masina. Noapte (2024)",
+            "slug": "ext-masina-noapte-2024",
+            "year": 2024,
+            "rating": 5.5,
+            "runtime": 73,
+            "language": "Romanian",
+            "background_image": "https://yts.mx/assets/images/movies/ext_masina_noapte_2024/background.jpg",
+            "background_image_original": "https://yts.mx/assets/images/movies/ext_masina_noapte_2024/background.jpg",
+            "small_cover_image": "https://yts.mx/assets/images/movies/ext_masina_noapte_2024/small-cover.jpg",
+            "medium_cover_image": "https://yts.mx/assets/images/movies/ext_masina_noapte_2024/medium-cover.jpg",
+            "large_cover_image": "https://yts.mx/assets/images/movies/ext_masina_noapte_2024/large-cover.jpg",
+            "id": "15",
+            "type": "movie",
+            "genres": [
+            "Comedy"
+            ]
+        },
+        {
+            "title": "Rebellious",
+            "title_english": "Rebellious",
+            "title_long": "Rebellious (2024)",
+            "slug": "rebellious-2024",
+            "year": 2024,
+            "rating": 6.7,
+            "runtime": 94,
+            "language": "English",
+            "background_image": "https://yts.mx/assets/images/movies/rebellious_2024/background.jpg",
+            "background_image_original": "https://yts.mx/assets/images/movies/rebellious_2024/background.jpg",
+            "small_cover_image": "https://yts.mx/assets/images/movies/rebellious_2024/small-cover.jpg",
+            "medium_cover_image": "https://yts.mx/assets/images/movies/rebellious_2024/medium-cover.jpg",
+            "large_cover_image": "https://yts.mx/assets/images/movies/rebellious_2024/large-cover.jpg",
+            "id": "16",
+            "type": "movie",
+            "genres": [
+            "Fantasy",
+            "Horror"
+            ]
+        },
+        {
+            "title": "Baby John",
+            "title_english": "Baby John",
+            "title_long": "Baby John (2024)",
+            "slug": "baby-john-2024",
+            "year": 2024,
+            "rating": 6.2,
+            "runtime": 159,
+            "language": "Hindi",
+            "background_image": "https://yts.mx/assets/images/movies/baby_john_2024/background.jpg",
+            "background_image_original": "https://yts.mx/assets/images/movies/baby_john_2024/background.jpg",
+            "small_cover_image": "https://yts.mx/assets/images/movies/baby_john_2024/small-cover.jpg",
+            "medium_cover_image": "https://yts.mx/assets/images/movies/baby_john_2024/medium-cover.jpg",
+            "large_cover_image": "https://yts.mx/assets/images/movies/baby_john_2024/large-cover.jpg",
+            "id": "17",
+            "type": "movie",
+            "genres": [
+            "Comedy",
+            "Romance"
+            ]
+        },
+        {
+            "title": "Una vez más",
+            "title_english": "Una vez más",
+            "title_long": "Una vez más (2019)",
+            "slug": "una-vez-mas-2019",
+            "year": 2019,
+            "rating": 5.8,
+            "runtime": 112,
+            "language": "Estonia",
+            "background_image": "https://yts.mx/assets/images/movies/una_vez_mas_2019/background.jpg",
+            "background_image_original": "https://yts.mx/assets/images/movies/una_vez_mas_2019/background.jpg",
+            "small_cover_image": "https://yts.mx/assets/images/movies/una_vez_mas_2019/small-cover.jpg",
+            "medium_cover_image": "https://yts.mx/assets/images/movies/una_vez_mas_2019/medium-cover.jpg",
+            "large_cover_image": "https://yts.mx/assets/images/movies/una_vez_mas_2019/large-cover.jpg",
+            "id": "18",
+            "type": "movie",
+            "genres": [
+            "Comedy"
+            ]
+        },
+        {
+            "title": "Je l'aime à mentir",
+            "title_english": "Je l'aime à mentir",
+            "title_long": "Je l'aime à mentir (2021)",
+            "slug": "je-laime-a-mentir-2021",
+            "year": 2021,
+            "rating": 5.4,
+            "runtime": 92,
+            "language": "French",
+            "background_image": "https://yts.mx/assets/images/movies/je_laime_a_mentir_2021/background.jpg",
+            "background_image_original": "https://yts.mx/assets/images/movies/je_laime_a_mentir_2021/background.jpg",
+            "small_cover_image": "https://yts.mx/assets/images/movies/je_laime_a_mentir_2021/small-cover.jpg",
+            "medium_cover_image": "https://yts.mx/assets/images/movies/je_laime_a_mentir_2021/medium-cover.jpg",
+            "large_cover_image": "https://yts.mx/assets/images/movies/je_laime_a_mentir_2021/large-cover.jpg",
+            "id": "19",
+            "type": "movie",
+            "genres": [
+            "Comedy"
+            ]
+        },
+        {
+           "title": "Remember Us",
+            "title_english": "Remember Us",
+            "title_long": "Remember Us (2019)",
+            "slug": "remember-us-2019",
+            "year": 2019,
+            "rating": 5.6,
+            "runtime": 89,
+            "language": "French",
+            "background_image": "https://yts.mx/assets/images/movies/remember_us_2019/background.jpg",
+            "background_image_original": "https://yts.mx/assets/images/movies/remember_us_2019/background.jpg",
+            "small_cover_image": "https://yts.mx/assets/images/movies/remember_us_2019/small-cover.jpg",
+            "medium_cover_image": "https://yts.mx/assets/images/movies/remember_us_2019/medium-cover.jpg",
+            "large_cover_image": "https://yts.mx/assets/images/movies/remember_us_2019/large-cover.jpg",
+            "id": "20",
+            "type": "movie",
+            "genres": [
+            "Thriller"
+            ]
+        }
+    ]
+}

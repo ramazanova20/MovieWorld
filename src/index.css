@@ -1,0 +1,101 @@
+@import "tailwindcss";
+#app {
+    height: 100%;
+  }
+  html,
+  body {
+    position: relative;
+    height: 100%;
+  }
+  
+  body {
+    /* background: #eee; */
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .swiper {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+  
+    /* Center slide text vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  /* .swiper-button-prev:after, .swiper-button-next:after {
+    font-family: swiper-icons;
+    font-size: var(--swiper-navigation-size);
+    text-transform: none !important;
+    letter-spacing: 0;
+    font-variant: initial;
+    line-height: 1;
+} */
+ /* Oxları ümumi stil */
+.swiper-button-prev, .swiper-button-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.6); /* Arxaplan rəngi */
+  border-radius: 50%; /* Dairəvi forma */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Ox ikonu */
+.swiper-button-prev::after, 
+.swiper-button-next::after {
+  font-size: 18px; /* Ox ikon ölçüsü */
+  color: #800000; /* Bordo rəng */
+}
+
+/* Hover effekti */
+.swiper-button-prev:hover, 
+.swiper-button-next:hover {
+  background-color: #800000; /* Bordo rəng */
+}
+
+.swiper-button-prev:hover::after, 
+.swiper-button-next:hover::after {
+  color: #fff; /* Ağ ox */
+}
+
+/* Sol ox üçün əlavə düzəliş */
+.swiper-button-prev {
+  left: 10px;
+}
+
+/* Sağ ox üçün əlavə düzəliş */
+.swiper-button-next {
+  right: 10px;
+}
+
+@media (max-width: 640px) {
+  .ant-pagination-prev,
+  .ant-pagination-next {
+      min-width: 15px !important;
+      height: 15px !important;
+      line-height: 15px !important;
+      font-size: 8px !important;
+
+  }
+}
+
