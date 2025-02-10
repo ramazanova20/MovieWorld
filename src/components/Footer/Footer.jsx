@@ -1,49 +1,46 @@
-import React from 'react';
+import React, { Fragment, useEffect, useState } from 'react';
+import logo from "../../assets/img/movieworldlogo.png";
+import { Link } from 'react-router-dom';
 
 function Footer() {
+  const [year, setYear] = useState(new Date().getFullYear());
+
+  useEffect(() => {
+    setYear(new Date().getFullYear());
+  }, []);
+
   return (
-    <div className='bg-[#444444] text-white'>
-      <footer className="px-4 py-6 max-w-full mx-auto">
+    <div className='bg-[#101828] text-white'>
+      <footer className="container lg:max-w-[1280px] mx-auto p-3">
         <div className="flex flex-col items-center space-y-6 lg:flex-row lg:justify-between">
           <div className="lg:w-1/3 text-center lg:text-left">
-            <a href="#" className="flex items-center justify-center lg:justify-start space-x-3">
-              <div className="w-12 h-12 flex items-center justify-center bg-violet-600 rounded-full">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="currentColor" className="w-5 h-5 text-white">
-                  <path d="M18.266 26.068l7.839-7.854 4.469 4.479c1.859 1.859 1.859 4.875 0 6.734l-1.104 1.104c-1.859 1.865-4.875 1.865-6.734 0zM30.563 2.531l-1.109-1.104c-1.859-1.859-4.875-1.859-6.734 0l-6.719 6.734-6.734-6.734c-1.859-1.859-4.875-1.859-6.734 0l-1.104 1.104c-1.859 1.859-1.859 4.875 0 6.734l6.734 6.734-6.734 6.734c-1.859 1.859-1.859 4.875 0 6.734l1.104 1.104c1.859 1.859 4.875 1.859 6.734 0l21.307-21.307c1.859-1.859 1.859-4.875 0-6.734z"></path>
-                </svg>
-              </div>
-              <span className="text-2xl font-semibold">Brand Name</span>
-            </a>
+            <div className="logo">
+              <img src={logo} alt="Logo" className='max-w-[220px]' />
+            </div>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 text-center lg:text-left">
-            <div>
-              <h3 className="text-lg font-semibold">Product</h3>
+          {/* Flex əvəzinə Grid olan hissə */}
+          <div className="flex flex-wrap justify-center lg:justify-between w-full gap-6 text-center lg:text-left">
+            <div className="flex flex-col items-center lg:items-start">
+              <h3 className="text-lg font-semibold mb-2">Category</h3>
               <ul className="space-y-2">
-                <li><a href="#">Features</a></li>
-                <li><a href="#">Integrations</a></li>
-                <li><a href="#">Pricing</a></li>
-                <li><a href="#">FAQ</a></li>
+                <li><Link to="/show" className="hover:text-yellow-400">All Shows</Link></li>
+                <li><Link to="/film" className="hover:text-yellow-400">All Films</Link></li>
+                <li><Link to="/genres" className="hover:text-yellow-400">Genres</Link></li>
               </ul>
             </div>
-            <div>
-              <h3 className="text-lg font-semibold">Company</h3>
+
+            <div className="flex flex-col items-center lg:items-start">
+              <h3 className="text-lg font-semibold mb-2">Company</h3>
               <ul className="space-y-2">
-                <li><a href="#">Privacy</a></li>
-                <li><a href="#">Terms of Service</a></li>
+                <li><Link to={`/aboutus`} className="hover:text-yellow-400">About Us</Link></li>
+                <li><Link to={`/contact`} className="hover:text-yellow-400">Contact</Link></li>
               </ul>
             </div>
-            <div>
-              <h3 className="text-lg font-semibold">Developers</h3>
-              <ul className="space-y-2">
-                <li><a href="#">Public API</a></li>
-                <li><a href="#">Documentation</a></li>
-                <li><a href="#">Guides</a></li>
-              </ul>
-            </div>
-            <div>
+
+            <div className="flex flex-col items-center lg:items-start">
               <h3 className="text-lg font-semibold">Social Media</h3>
-              <div className="flex justify-center lg:justify-start space-x-3">
+              <div className="flex space-x-3">
                 <a href="#" title="Facebook" className="p-2 rounded-full bg-blue-600 hover:bg-blue-800 transition">
                   <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 32 32" className="w-5 h-5">
                     <path d="M32 16c0-8.839-7.167-16-16-16-8.839 0-16 7.161-16 16 0 7.984 5.849 14.604 13.5 15.803v-11.177h-4.063v-4.625h4.063v-3.527c0-4.009 2.385-6.223 6.041-6.223 1.751 0 3.584 0.312 3.584 0.312v3.937h-2.021c-1.984 0-2.604 1.235-2.604 2.5v3h4.437l-0.713 4.625h-3.724v11.177c7.645-1.199 13.5-7.819 13.5-15.803z"></path>
@@ -58,7 +55,14 @@ function Footer() {
             </div>
           </div>
         </div>
-        <div className="mt-6 text-sm text-center">© 2024 Brand Name. All rights reserved.</div>
+
+        <div className="flex flex-col w-full lg:w-auto">
+          <Fragment>
+            <div className="pt-5 footer justify-center text-center flex">
+              <h6 className='text-center'>{`© ${year}. MovieWorld. All rights reserved.`}</h6>
+            </div>
+          </Fragment>
+        </div>
       </footer>
     </div>
   );

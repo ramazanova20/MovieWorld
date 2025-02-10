@@ -1,20 +1,14 @@
 import React from 'react'
 import CarusellMovies from './CarusellMovies'
 import CarusellShows from './CarusellShows'
-import Banner from './Banner'
 import HistoryFilms from './HistoryFilms'
 
 function Main() {
   return (
-    <div className='
-   
-    bg-[#800000]
+    <div className='bg-[#1A1A2E]'>
 
-    '>
-        {/* <Banner/> */}
         <HistoryFilms/>
         <CarusellMovies/>
-        
         <CarusellShows/>
 
     </div>

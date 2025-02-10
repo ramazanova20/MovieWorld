@@ -12,7 +12,7 @@ const RatingFilter = () => {
 
   return (
     <div className="flex flex-col items-center">
-      <h3 className="text-lg font-semibold mb-2">Reytinq seçin:</h3>
+      <h3 className="text-lg font-semibold mb-2">Select rating:</h3>
       <div className="flex">
         {[...Array(10)].map((_, index) => {
           const starValue = index + 1;

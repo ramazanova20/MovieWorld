@@ -1,8 +1,10 @@
 import React from 'react'
 
-function Contact() {
+function Contact() {        
+
   return (
-    <div className='shadow dark:bg-[#800000]'>
+	<div className='bg-gradient-to-r from-[#1A1A2E] to-[#049eea] text-white '>
+    <div >
 		<section className="p-6 dark:text-gray-800">
 	<form noValidate="" className="container w-full max-w-xl p-8 mx-auto space-y-6 rounded-md shadow dark:bg-[#800000]">
 		<h2 className="w-full text-3xl font-bold leading-tight">Contact us</h2>
@@ -23,6 +25,7 @@ function Contact() {
 		</div>
 	</form>
 </section></div>
+</div>
   )
 }
 

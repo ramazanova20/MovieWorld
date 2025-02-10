@@ -6,8 +6,7 @@ function MobileMenu() {
   const [showMenu, setShowMenu] = useState(false);
 
   return (
-    <div className="md:hidden relative ">
-      {/* Açma/Qapama düyməsi */}
+    <div className="lg:hidden relative ">
       <button
         onClick={() => setShowMenu(!showMenu)}
         className="text-white text-2xl z-50 relative"
@@ -15,8 +14,6 @@ function MobileMenu() {
         
         {showMenu ? "" : <IoMenu />}
       </button>
-
-      {/* Açılan Mobil Menyu */}
       <div
         className={`fixed top-0 left-0 w-full h-full bg-black bg-opacity-80 z-40 transform ${
           showMenu ? "translate-x-0" : "-translate-x-full"

@@ -6,13 +6,14 @@ import { Pagination } from 'antd';
 import { useAllDataContext } from "../../context/AllDataContext";
 import "../../index.css";
 import Icon from "./Icon";
+import Loading from "./Loading";
 
 function ShowInfo() {
   const { id } = useParams();
   const [product, setProduct] = useState(null);
   const { data,addToFavorites } = useAllDataContext();
   const [page, setPage] = useState(1);
-  const pageSize = 12;
+  const pageSize = 15;
   const [episodeImages, setEpisodeImages] = useState({}); 
 
   useEffect(() => {
@@ -49,7 +50,6 @@ function ShowInfo() {
   }, [data]);
 
 
-  // Calculate the data to display for the current page
   const startIndex = (page - 1) * pageSize;
   const endIndex = startIndex + pageSize;
   const paginatedInfo = (data || []).slice(startIndex, endIndex);
@@ -57,23 +57,21 @@ function ShowInfo() {
   if (!product) {
     return (
       <div className="container lg:max-w-[1280px] mx-auto p-3">
-       Loading...
+       <Loading/>
       </div>
     );  
   }
 
-  
-
   return (
-    <div className="bg-[#800000]">
+    <div className="bg-[#1A1A2E]">
     <div className="container lg:max-w-[1280px] mx-auto p-4">
       <div className="flex flex-col md:flex-row items-center md:items-start gap-6">
         <div className="w-full md:w-full relative">
         <div className="rounded-lg text-sm p-1.5 absolute top-2.5 right-2.5">
-                    <button onClick={() => addToFavorites(product)}>
-                       <Icon/>
-                      </button>
-                    </div>
+          <button onClick={() => addToFavorites(product)}>
+           <Icon/>
+          </button>
+        </div>
           <img
             className="h-full w-full object-contain"
             src={episodeImages[product.id] || "https://images.pexels.com/photos/1117132/pexels-photo-1117132.jpeg?auto=compress&cs=tinysrgb&w=600"}
@@ -95,15 +93,15 @@ function ShowInfo() {
         </div>
       </div>
       <div className="my-4">
-        <h1 className="uppercase italic text-2xl font-bold mb-4">Shows</h1>
-        <div className="flex flex-wrap gap-4 mx-auto justify-center m-1">
+        <h1 className="uppercase italic text-2xl font-bold mb-4 text-white">Shows</h1>
+        <div className="flex flex-wrap gap-10 mx-auto justify-center m-1">
           {paginatedInfo.map((item, i) => (
-            <div key={i} className="w-[180px] rounded-lg shadow-lg bg-white">
+            <div key={i} className="w-[180px] shadow-lg bg-white">
               <Link to={`/show/${item.id}`}>
-                <div className="w-full h-[240px]">
+                <div className="max-w-xs rounded-4xl hover:overflow-hidden shadow-lg hover:border-2 md:hover:border-4 hover:border-white">
                   <img
-                    className="object-cover w-full h-full rounded-t-lg"
-                    src={item.image?.medium || "https://via.placeholder.com/180x240"}
+                    className="w-full h-full"
+                    src={item.image?.medium || "https://images.pexels.com/photos/3131971/pexels-photo-3131971.jpeg?auto=compress&cs=tinysrgb&w=600"}
                     alt={item.name}
                   />
                 </div>

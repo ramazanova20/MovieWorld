@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useAllDataContext } from "../../context/AllDataContext";
+import Loading from "./Loading";
 
 const genreImages = {
   Comedy: "https://images.pexels.com/photos/7489030/pexels-photo-7489030.jpeg?auto=compress&cs=tinysrgb&w=600",
@@ -31,8 +32,12 @@ const Genres = () => {
   const [genres, setGenres] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [show, setShow] = useState(false);
 
-  // Extract genres
+  const handleClick = () => {
+    setShow(!show);
+  };
+  
   const extractGenres = (shows) => {
     const genres = new Set();
     shows.forEach((show) => {
@@ -52,7 +57,7 @@ const Genres = () => {
   }, [data]); 
 
   if (loading) {
-    return <div>Yüklənir...</div>;
+    return <div><Loading/></div>;
   }
 
   if (error) {
@@ -60,9 +65,9 @@ const Genres = () => {
   }
 
   return (
-    <div className="bg-[#800000]">
+    <div className="bg-[#1A1A2E]">
     <div className="container lg:max-w-[1280px] mx-auto p-3">
-      <h1>Janrlar</h1>
+      <h1 className="text-white">Genres</h1>
       {genres.length > 0 ? (
         <div className="flex flex-wrap justify-center md:gap-2 lg:gap-3 xl:gap-5 2xl:gap-12 mx-auto ">
           {genres.map((genre, index) => (
@@ -73,13 +78,13 @@ const Genres = () => {
                 className="w-full h-full object-cover"
               />
               <div className="absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center text-black font-bold text-xl p-2">
-                <Link to={`/genre/${genre}`} className="text-center">{genre}</Link>
+                <Link to={`/genre/${genre}`} className="text-center bg-black/50 md:w-40">{genre}</Link>
               </div>
             </div>
           ))}
         </div>
       ) : (
-        <p>Janrlar tapılmadı</p>
+        <p>Not Found!</p>
       )}
     </div>
     </div>

@@ -1,15 +1,21 @@
 import axios from "axios";
 
+
 async function getAllData() {
   const res = await axios.get("https://api.tvmaze.com/shows");
   return res.data;
 }
 async function getMovieData() {
     const res = await axios.get("https://moviedata-xi.vercel.app/movie");
-    return res.data; // ✅ Boş array qaytar ki, səhv olmasın
+    return res.data; 
   }
+// async function getMovieData() {
+//     const res = await axios.get("/api/movie");
+//     return res.data; 
+//   }
+  
 
-
+  
   async function getInfoById(id) {
     const res = await axios.get(`https://api.tvmaze.com/shows/${id}`);
     return res.data;
@@ -25,6 +31,13 @@ async function getMovieData() {
       return res.data;
    
   }
+  
+  // async function getMovieById(id) {
+   
+  //     const res = await axios.get(`/api/movie/${id}`);
+  //     return res.data;
+   
+  // }
   
   
   export {

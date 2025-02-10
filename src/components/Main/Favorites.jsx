@@ -7,19 +7,18 @@ function Favorites() {
   const { favorites, removeFromFavorites } = useAllDataContext();
 
   return (
-    <div className="bg-[#800000]">
+    <div className="bg-[#1A1A2E]">
     <div className="container lg:max-w-[1280px] mx-auto p-4">
-      <h1 className="text-2xl font-bold mb-4 uppercase italic">Favorite TV shows and Movies</h1>
+      <h1 className="text-2xl font-bold mb-4 uppercase italic text-white">Favorite TV shows and Movies</h1>
       {favorites.length === 0 ? (
-        <div className="text-center py-10">
+        <div className="text-center py-24">
           <img
             src="https://media.tenor.com/Sn439TTjoTAAAAAj/movie-time.gif"
             // src="https://media0.giphy.com/media/7yE5Tqcb2IKeJj5x9A/giphy.gif?cid=6c09b9520s32h56jjkgb91v2xhqrlp4vvzn6zq2x5hgm2uxi&ep=v1_stickers_search&rid=giphy.gif&ct=s"
             alt=""
             className="m-auto"
           />
-          {/* <h2 className="text-2xl font-bold mb-4">EMPTY! Unfortunately</h2> */}
-          <Link to="/" className="text-blue-500 hover:underline">
+          <Link to="/" className="text-white hover:text-yellow-400 hover:underline">
             Let's discover your Favorite TV shows and Movies
           </Link>
         </div>
@@ -39,8 +38,8 @@ function Favorites() {
                 <Link to={item.type === "movie" ? `/film/${item.id}` : `/show/${item.id}`}>
                   <div className="w-full h-full">
                     <img
-                      className="h-full object-contain"
-                      src={item.image?.medium || item.medium_cover_image || "https://via.placeholder.com/180x240"}
+                      className="h-full w-full"
+                      src={item.image?.medium || item.medium_cover_image || "https://images.pexels.com/photos/3131971/pexels-photo-3131971.jpeg?auto=compress&cs=tinysrgb&w=600"}
                       alt={item.name || item.title}
                     />
                   </div>

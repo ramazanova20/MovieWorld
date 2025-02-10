@@ -2,7 +2,7 @@ import React from "react";
 import { useAllDataContext } from "../../context/AllDataContext";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation } from "swiper/modules";
-import { Link } from "react-router-dom";  // React Router Link import edilir
+import { Link } from "react-router-dom";  
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -67,9 +67,9 @@ const CarusellShows = () => {
     fetchGenres();
   }, []);
 
-  // Loading or error messages for genres
+  
   if (loadingGenres) {
-    return <div>Loading...</div>;
+    return <div> </div>;
   }
 
   if (errorGenres) {
@@ -77,13 +77,13 @@ const CarusellShows = () => {
   }
 
   return (
-    <div className="bg-[#800000]">
+    <div className="bg-[#1A1A2E]">
     <div className="container lg:max-w-[1280px] mx-auto p-3">
-      {/* 7+ Reytinqli Filmlər */}
+      {/* 7+ Rated Shows */}
       <div>
-        <h2 className="text-center text-2xl font-bold mb-6 flex justify-between">
-          7+ Reytinqli Shows
-          <Link to="/topShows" className="text-blue-500 text-sm hover:underline">View All</Link>
+        <h2 className="text-center text-2xl font-bold mb-6 flex justify-between text-white">
+          7+ Rated Shows
+          <Link to="/topShows" className="text-yellow-400 text-sm hover:underline">View All</Link>
         </h2>
         {showList.length > 0 ? (
           <Swiper
@@ -113,40 +113,32 @@ const CarusellShows = () => {
           >
             {showList.map((show, index) => (
               <SwiperSlide key={index} className="flex justify-center w-[180px] relative">
-                <div className="rounded-4xl bg-white pt-1.5 px-1.5 absolute top-2.5 right-2.5">
+                <div className="rounded-4xl bg-white pt-1.5 px-1.5 absolute top-2.5 right-2.5 shadow-[0px_0px_6px_2px_#c8e232]">
                   <button onClick={() => addToFavorites(show)}>
                    <Icon/>
                   </button>
                 </div>
                 <div className="rounded-lg shadow-lg">
-                    <Link to={ `/show/${show.id}`}>
-
-                      <div className="relative max-w-xs rounded-4xl overflow-hidden shadow-lg hover:border-2 md:hover:border-4 hover:border-white">
-                        <img src={show.image?.medium || "https://via.placeholder.com/180x240"}
-                          alt={show.name} className="w-full h-auto transition-opacity duration-300 hover:opacity-80" />
-
-                      </div>
-
-                  {/* <img
-                    src={show.image?.medium || "https://via.placeholder.com/180x240"}
-                    alt={show.name}
-                    className="w-full h-[240px] object-cover"
-                  /> */}
+                  <Link to={`/show/${show.id}`}>
+                    <div className="max-w-xs rounded-4xl hover:overflow-hidden shadow-lg hover:border-2 md:hover:border-4 hover:border-white">
+                      <img src={show.image?.medium || "https://images.pexels.com/photos/3131971/pexels-photo-3131971.jpeg?auto=compress&cs=tinysrgb&w=600"}
+                        alt={show.name} className="w-full h-auto " />
+                    </div>
                   </Link>
                 </div>
               </SwiperSlide>
             ))}
           </Swiper>
         ) : (
-          <p className="text-center text-gray-500">Uyğun film tapılmadı.</p>
+          <p className="text-center text-gray-500">No matching show found.</p>
         )}
       </div>
 
       {/* Filmlər */}
       <div className="mt-12">
-        <h2 className="text-center text-2xl font-bold mb-6 flex justify-between">
+        <h2 className="text-center text-2xl font-bold mb-6 flex justify-between text-white">
         Latest Shows from 2020 Onwards
-          <Link to="/latestShows" className="text-blue-500 text-sm hover:underline">View All</Link>
+          <Link to="/latestShows" className="text-yellow-400 text-sm hover:underline">View All</Link>
         </h2>
         {filterShows.length > 0 ? (
           <Swiper
@@ -176,38 +168,32 @@ const CarusellShows = () => {
           >
             {filterShows.map((latest, index) => (
               <SwiperSlide key={index} className="flex justify-center w-[300px] relative">
-                <div className="rounded-4xl bg-white pt-1.5 px-1.5 absolute top-2.5 right-2.5">
-                  <button onClick={() => addToFavorites(show)}>
+                <div className="rounded-4xl bg-white pt-1.5 px-1.5 absolute top-2.5 right-2.5 shadow-[0px_0px_6px_2px_#c8e232]">
+                  <button onClick={() => addToFavorites(latest)}>
                    <Icon/>
                   </button>
                 </div>
                 <div className="rounded-lg shadow-lg">
-                    <Link to={ `/show/${latest.id}`}>
-                    <div className="relative max-w-xs rounded-4xl overflow-hidden shadow-lg hover:border-2 md:hover:border-4 hover:border-white">
-                      <img src={latest.image?.medium || "https://via.placeholder.com/180x240"}
-                        alt={latest.name} className="w-full h-auto transition-opacity duration-300 hover:opacity-80" />
+                  <Link to={ `/show/${latest.id}`}>
+                    <div className=" max-w-xs rounded-4xl hover:overflow-hidden shadow-lg hover:border-2 md:hover:border-4 hover:border-white">
+                      <img src={latest.image?.medium || "https://images.pexels.com/photos/3131971/pexels-photo-3131971.jpeg?auto=compress&cs=tinysrgb&w=600"}
+                        alt={latest.name} className="w-full h-auto " />
                     </div>
-                    
-                  {/* <img
-                    src={latest.image?.medium || "https://via.placeholder.com/180x240"}
-                    alt={latest.name}
-                    className="w-full h-[240px] object-cover"
-                  /> */}
                   </Link>
                 </div>
               </SwiperSlide>
             ))}
           </Swiper>
         ) : (
-          <p className="text-center text-gray-500">Uyğun film tapılmadı.</p>
+          <p className="text-center text-gray-500">No matching show found.</p>
         )}
       </div>
 
       {/* Genres Carousel */}
       <div className="mt-12">
-        <h2 className="text-center text-2xl font-bold mb-6 flex justify-between">
+        <h2 className="text-center text-2xl font-bold mb-6 flex justify-between text-white">
           Genres
-          <Link to="/genres" className="text-blue-500 text-sm hover:underline">
+          <Link to="/genres" className="text-yellow-500 text-sm hover:underline">
             View All
           </Link>
         </h2>
@@ -240,19 +226,14 @@ const CarusellShows = () => {
             {genres.map((genre, index) => (
               <SwiperSlide key={index} className="flex justify-center items-center w-[280px]">
                 <div key={index} className="relative">
-                    <Link to={ `/genre/${genre}`}>
-                    <div className="relative max-w-xs rounded-4xl overflow-hidden shadow-lg hover:border-2 md:hover:border-4 hover:border-white">
+                  <Link to={ `/genre/${genre}`}>
+                    <div className=" max-w-xs rounded-4xl hover:overflow-hidden shadow-lg hover:border-2 md:hover:border-4 hover:border-white">
                       <img src={genreImages[genre] || "https://images.pexels.com/photos/5435459/pexels-photo-5435459.jpeg?auto=compress&cs=tinysrgb&w=600"}
-                        alt={genre} className="w-full h-auto transition-opacity duration-300 hover:opacity-80" />
+                        alt={genre} className="w-full h-auto" />
                     </div>
-                      {/* <img
-                        src={genreImages[genre] || "https://images.pexels.com/photos/5435459/pexels-photo-5435459.jpeg?auto=compress&cs=tinysrgb&w=600"}
-                        alt={genre}
-                        className="w-full h-[240px] object-cover"
-                      /> */}
-                    </Link>
+                  </Link>
                   <div className="absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center text-yellow-300 font-bold text-xl p-2">
-                    <Link to={`/genre/${genre}`} className="text-center bg-black/50 md:w-44">{genre}</Link>
+                    <Link to={`/genre/${genre}`} className="text-center bg-black/50 md:w-40">{genre}</Link>
                   </div>
                 </div>
               </SwiperSlide>

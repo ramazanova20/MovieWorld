@@ -5,15 +5,16 @@ import { Pagination } from "antd";
 import { useAllDataContext } from "../../context/AllDataContext";
 import { Link } from "react-router-dom";
 import "../../index.css";
+import Loading from "./Loading";
 
 function FilmInfo() {
-    const { id } = useParams(); // URL-dən `id` götürürük
+    const { id } = useParams(); 
     const [movie, setMovie] = useState(null);
-    const { moviedata,ad } = useAllDataContext(); // ✅ `useDataContext` istifadə edirik
+    const { moviedata,ad } = useAllDataContext(); 
 
-    // Sayfalandırma üçün state
+    
     const [page, setPage] = useState(1);
-    const pageSize = 12; // Hər səhifədə neçə element göstəriləcək
+    const pageSize = 15; 
 
     useEffect(() => {
         const fetchMovie = async () => {
@@ -26,46 +27,44 @@ function FilmInfo() {
     }, [id]);
 
     if (!movie) {
-        return <div>Loading...</div>;
+        return <div><Loading/></div>;
     }
 
-    // Səhifələnmiş məlumatları hesablayırıq
     const startIndex = (page - 1) * pageSize;
     const endIndex = startIndex + pageSize;
-    const paginatedInfo = moviedata.slice(startIndex, endIndex) || []; // ✅ `moviedata` istifadə olunur
+    const paginatedInfo = moviedata.slice(startIndex, endIndex) || []; 
 
     return (
-        <div className="bg-[#800000]">
+        <div className="bg-[#1A1A2E]">
         <div className="container lg:max-w-[1280px] mx-auto p-4">
-            <div className="flex flex-col md:flex-row items-center md:items-start gap-6">
+            <div className="flex flex-col md:flex-row items-center md:items-start gap-10">
                 <div className="w-full md:w-full relative">
                     <img
                         className="h-full w-full object-contain"
-                        src={movie.background_image_original || "https://via.placeholder.com/500"}
+                        src={movie.background_image_original || "https://images.pexels.com/photos/1117132/pexels-photo-1117132.jpeg?auto=compress&cs=tinysrgb&w=600"}
                         alt={movie.title}
                     />
-                    <div className="absolute bottom-0 left-0 w-full bg-black/50 text-white p-4">
-                        <h2 className="text-xl font-semibold">{movie.title}</h2>
-                        <div className="hidden md:flex md:flex-col">
-                        <p className="text-sm">{movie.year}</p>
-                        <p className="text-sm">{movie.language}</p>
-                        <p className="text-sm">{movie.genres?.join(", ")}</p>
+                    <div className="absolute inset-0 bg-black/50 flex flex-col justify-center items-center md:items-center text-white p-4">
+                        <h2 className="text-4xl md:text-6xl font-semibold">{movie.title}</h2>
+                        <p className="text-xl">{movie.year}</p>
+                        <div className="hidden md:flex md:flex-col text-center">
+                            <p className="text-xl">{movie.rating}★</p>
+                            <p className="text-xl">{movie.language}</p>
+                            <p className="text-xl">{movie.genres?.join(", ")}</p>
                         </div>
                     </div>
                 </div>
             </div>
-
-            {/* Shows bölməsi */}
             <div className="my-4">
-                <h1 className="uppercase italic text-2xl font-bold mb-4">Shows</h1>
-                <div className="flex flex-wrap gap-4 mx-auto justify-center m-1">
+                <h1 className="uppercase italic text-2xl font-bold mb-4 text-white">Movies</h1>
+                <div className="flex flex-wrap gap-10 mx-auto justify-center m-1">
                     {paginatedInfo.map((item, i) => (
-                        <div key={i} className="w-[180px] rounded-lg shadow-lg bg-white">
+                        <div key={i} className="w-[180px] shadow-lg bg-white">
                             <Link to={`/film/${item.id}`}>
-                                <div className="w-full h-[240px]">
+                                <div className="max-w-xs rounded-4xl hover:overflow-hidden shadow-lg hover:border-2 md:hover:border-4 hover:border-white">
                                     <img
-                                        className="object-cover w-full h-full rounded-t-lg"
-                                        src={item.large_cover_image || item.medium_cover_image || "https://via.placeholder.com/180x240"}
+                                        className="w-full h-full"
+                                        src={item.large_cover_image || item.medium_cover_image || "https://images.pexels.com/photos/3131971/pexels-photo-3131971.jpeg?auto=compress&cs=tinysrgb&w=600"}
                                         alt={item.title}
                                     />
                                 </div>
@@ -74,11 +73,11 @@ function FilmInfo() {
                     ))}
                 </div>
 
-                {/* Sayfalandırma (Pagination) */}
+                
                 <div className="flex justify-center py-6">
                     <Pagination
                         current={page}
-                        total={moviedata.length || 0} // ✅ `moviedata`-dan total götürülür
+                        total={moviedata.length || 0}
                         pageSize={pageSize}
                         onChange={(newPage) => setPage(newPage)}
                         className="custom-pagination"

@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { getAllData, getMovieData } from "../../services/api";
 import { useAllDataContext } from "../../context/AllDataContext";
 import Icon from "./Icon";
+import Loading from "./Loading";
 
 const RatingFilms = () => {
   const [films, setFilms] = useState([]);
@@ -48,38 +49,37 @@ const RatingFilms = () => {
 
   const filteredFilms = films.filter((film) => Math.round(film.rating) === rating);
 
-  if (loading) return <div>Yüklənir...</div>;
+  if (loading) return <div><Loading/></div>;
   if (error) return <div>{error}</div>;
 
   return (
-    <div className="bg-[#800000]">
+    <div className="bg-[#1A1A2E]">
     <div className="container lg:max-w-[1280px] mx-auto p-3">
-      <h1 className="text-xl font-bold mb-3">Qiymətləndirilmiş Filmlər</h1>
-      <h3 className="text-lg mb-3">Seçilmiş reytinq: {rating} ★</h3>
+      <h1 className="text-xl font-bold mb-3 text-white">Rated Movies</h1>
+      <h3 className="text-lg mb-3">Selected rating: {rating} ★</h3>
 
       {filteredFilms.length > 0 ? (
-        <div className="flex flex-wrap gap-2 mx-auto justify-center m-1">
+        <div className="flex flex-wrap gap-10 mx-auto justify-center m-1">
           {filteredFilms.map((film, i) => (
-            <div key={i} className="w-[180px] shadow-lg relative mt-4">
-              <div className="rounded-4xl bg-white pt-1.5 px-1.5 absolute top-2.5 right-2.5">
-                <button onClick={() => addToFavorites(show)}>
+            <div key={i} className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 max-w-[200px] overflow-hidden shadow-lg bg-white relative mt-4 transition-transform duration-200 hover:scale-105">
+              <div className="rounded-4xl bg-white pt-1.5 px-1.5 absolute top-2.5 right-2.5 shadow-[0px_0px_6px_2px_#c8e232]">
+                <button onClick={() => addToFavorites(film)}>
                  <Icon/>
                 </button>
               </div>
-              <Link to={film.type === "movie" ? `/film/${film.id}` : `/show/${film.id}`}>
-                <div className="w-full h-full ">
-                  <img
-                    className="object-cover w-full h-full rounded-lg"
-                    src={film.image?.medium || film.medium_cover_image}
-                    alt={film.name || film.title}
-                  />
-                </div>
-              </Link>
+              <div className="rounded-lg shadow-lg">
+                 <Link to={film.type === "movie" ? `/film/${film.id}` : `/show/${film.id}`}>
+                 <div className=" max-w-xs rounded-4xl hover:overflow-hidden shadow-lg hover:border-2 md:hover:border-4 hover:border-white">
+                   <img src={film.image?.medium || film.medium_cover_image || "https://images.pexels.com/photos/3131971/pexels-photo-3131971.jpeg?auto=compress&cs=tinysrgb&w=600"}
+                    alt={film.name || film.title} className="w-full h-full " />
+                 </div>
+               </Link>
+              </div>
             </div>
           ))}
         </div>
       ) : (
-        <p className="text-center text-gray-600">Bu reytinqə uyğun film tapılmadı.</p>
+        <p className="text-center text-gray-600">No movies matching this rating were found.</p>
       )}
     </div>
     </div>

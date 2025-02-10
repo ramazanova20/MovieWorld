@@ -15,10 +15,10 @@ import TopMoviesList from './components/Main/TopMoviesList'
 import CarusellMovies from './components/Main/CarusellMovies'
 import AllShows from './components/Main/AllShows'
 import AllMovies from './components/Main/AllMovies'
-import Banner from './components/Main/Banner'
 import Favorites from './components/Main/Favorites'
 import { useAllDataContext } from './context/AllDataContext'
 import Contact from './components/Header/Contact'
+import AboutUs from './components/Header/AboutUs'
 
 
 function App() {
@@ -38,18 +38,15 @@ function App() {
       <Route path="/show/:id" element={<ShowInfo favorites={favorites} setFavorites={setFavorites}/>} />
       <Route path="/movie" element={<CarusellMovies/>} />
       <Route path="/latestShows" element={<LatestShows favorites={favorites} setFavorites={setFavorites}/>} />
-        <Route path="/latestMovies" element={<LatestMovies/>} />
-        <Route path="/topShows" element={<TopShowsList favorites={favorites} setFavorites={setFavorites}/>} />
-        <Route path="/topMovies" element={<TopMoviesList/>} />
-        <Route path="/show" element={<AllShows favorites={favorites} setFavorites={setFavorites}/>} />
-        <Route path="/film" element={<AllMovies/>} />
-        <Route path="/banner" element={<Banner/>} />
-        <Route path="/contact" element={<Contact/>} />
-        
-        <Route
-  path="/favorites"
-  element={<Favorites favorites={favorites} removeFromFavorites={removeFromFavorites} />}
-/>
+      <Route path="/latestMovies" element={<LatestMovies/>} />
+      <Route path="/topShows" element={<TopShowsList favorites={favorites} setFavorites={setFavorites}/>} />
+      <Route path="/topMovies" element={<TopMoviesList/>} />
+      <Route path="/show" element={<AllShows favorites={favorites} setFavorites={setFavorites}/>} />
+      <Route path="/film" element={<AllMovies/>} />
+      <Route path="/contact" element={<Contact/>} />
+      <Route path="/aboutus" element={<AboutUs/>} />
+      <Route path="/favorites" element={<Favorites favorites={favorites} removeFromFavorites={removeFromFavorites} />}/>
+      <Route path="*" element={<Error/>} />
       </Route>
      </Routes>
     </>

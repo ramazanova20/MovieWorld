@@ -4,7 +4,7 @@ import Menu from './Menu'
 
 function Header() {
   return (
-    <div className=' bg-[#444444]'>
+    <div className=' bg-[#101828]'>
         <HeaderTop/>
         <Menu/>
     </div>

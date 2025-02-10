@@ -8,6 +8,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "../../index.css";
 import Icon from "./Icon";
+import Loading from "./Loading";
 
 function CarusellMovies() {
   const { moviedata,addToFavorites } = useAllDataContext();
@@ -30,16 +31,16 @@ function CarusellMovies() {
   }) || [];
 
   if (isLoading) {
-    return <div>Yüklənir...</div>;
+    return <div><Loading/></div>;
   }
 
   return (
-    <div className="bg-[#800000]">
+    <div className="bg-[#1A1A2E]">
     <div className="container lg:max-w-[1280px] mx-auto p-3">
       <div>
-        <h2 className="text-center text-2xl font-bold mb-6 flex justify-between">
+        <h2 className="text-center text-2xl font-bold mb-6 flex justify-between text-white">
           7+ Reytinqli Movies
-          <Link to="/topMovies" className="text-blue-500 text-sm hover:underline">View All</Link>
+          <Link to="/topMovies" className="text-yellow-400 text-sm hover:underline">View All</Link>
         </h2>
         {filmList.length > 0 ? (
           <Swiper
@@ -68,33 +69,35 @@ function CarusellMovies() {
             className="mySwiper"
           >
             {filmList.map((movie, index) => (
-              <SwiperSlide key={index} className="flex justify-center w-[180px]">
+              <SwiperSlide key={index} className="flex justify-center w-[180px] mx-auto">
                 <div className="rounded-lg shadow-lg">
-                <div className="rounded-4xl bg-white pt-1.5 px-1.5 absolute top-2.5 right-2.5">
-                  <button onClick={() => addToFavorites(show)}>
+                <div className="rounded-4xl bg-white pt-1.5 px-1.5 absolute top-2.5 right-2.5 shadow-[0px_0px_6px_2px_#c8e232]">
+                  <button onClick={() => addToFavorites(movie)}>
                    <Icon/>
                   </button>
                 </div>
-                <Link to={`/film/${Number(movie.id)}`}>
-                  <img
-                    src={movie.large_cover_image || "https://via.placeholder.com/180x240"}
-                    alt={movie.title}
-                    className="w-full h-[240px] object-cover"
-                  />
-                </Link>
+                 <div className="rounded-lg shadow-lg">
+                      <Link to={`/film/${Number(movie.id)}`}>
+                      <div className=" max-w-xs rounded-4xl hover:overflow-hidden shadow-lg hover:border-2 md:hover:border-4 hover:border-white">
+                        <img src={movie.large_cover_image || "https://images.pexels.com/photos/3131971/pexels-photo-3131971.jpeg?auto=compress&cs=tinysrgb&w=600"}
+                              alt={movie.title} className="w-full h-auto " />
+                      </div>
+                    </Link>
+                  </div>
+               
                 </div>
               </SwiperSlide>
             ))}
           </Swiper>
         ) : (
-          <p className="text-center text-gray-500">Uyğun film tapılmadı.</p>
+          <p className="text-center text-gray-500">No matching movie found.</p>
         )}
       </div>
 
       <div className="mt-12">
-        <h2 className="text-center text-2xl font-bold mb-6 flex justify-between">
+        <h2 className="text-center text-2xl font-bold mb-6 flex justify-between text-white">
           Latest Movies from 2020 Onwards
-          <Link to="/latestMovies" className="text-blue-500 text-sm hover:underline">View All</Link>
+          <Link to="/latestMovies" className="text-yellow-400 text-sm hover:underline">View All</Link>
         </h2>
         {filterFilms.length > 0 ? (
           <Swiper
@@ -125,24 +128,25 @@ function CarusellMovies() {
             {filterFilms.map((movie, index) => (
               <SwiperSlide key={index} className="flex justify-center w-[300px]">
                 <div className="rounded-lg shadow-lg relative">
-                <div className="rounded-4xl bg-white pt-1.5 px-1.5 absolute top-2.5 right-2.5">
-                  <button onClick={() => addToFavorites(show)}>
+                <div className="rounded-4xl bg-white pt-1.5 px-1.5 absolute top-2.5 right-2.5 shadow-[0px_0px_6px_2px_#c8e232]">
+                  <button onClick={() => addToFavorites(movie)}>
                    <Icon/>
                   </button>
                 </div>
-                    <Link to={`/film/${Number(movie.id)}`}>
-                  <img
-                    src={movie.large_cover_image || "https://via.placeholder.com/180x240"}
-                    alt={movie.title}
-                    className="w-full h-[240px] object-cover"
-                  />
-                  </Link>
+                <div className="rounded-lg shadow-lg">
+                      <Link to={`/film/${Number(movie.id)}`}>
+                      <div className="max-w-xs rounded-4xl hover:overflow-hidden shadow-lg hover:border-2 md:hover:border-4 hover:border-white">
+                        <img src={movie.large_cover_image || "https://images.pexels.com/photos/3131971/pexels-photo-3131971.jpeg?auto=compress&cs=tinysrgb&w=600"}
+                              alt={movie.title} className="w-full h-auto " />
+                      </div>
+                    </Link>
+                  </div>
                 </div>
               </SwiperSlide>
             ))}
           </Swiper>
         ) : (
-          <p className="text-center text-gray-500">Uyğun film tapılmadı.</p>
+          <p className="text-center text-gray-500">No matching movie found.</p>
         )}
       </div>
     </div>

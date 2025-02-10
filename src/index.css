@@ -50,32 +50,42 @@
  /* Oxları ümumi stil */
 .swiper-button-prev, .swiper-button-next {
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 40px;
-  height: 40px;
-  background-color: rgba(255, 255, 255, 0.6); /* Arxaplan rəngi */
-  border-radius: 50%; /* Dairəvi forma */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease-in-out;
+  /* top: 100%;
+  transform: translateY(-100%); */
+   width: 40px !important; 
+  height: 40px; 
+  background-color: #1A1A2E; 
+  border-radius: 100% !important; 
+  
+    box-shadow: 0px 0px 6px 2px #c8e232 !important;
+  
+  
+  transition: all 0.5s ease-in-out;
 }
 
 /* Ox ikonu */
 .swiper-button-prev::after, 
 .swiper-button-next::after {
-  font-size: 18px; /* Ox ikon ölçüsü */
-  color: #800000; /* Bordo rəng */
+  font-size: 14px !important; 
+  color: #dde32e; /* Bordo rəng */
 }
 
 /* Hover effekti */
-.swiper-button-prev:hover, 
+/* .swiper-button-prev:hover, 
 .swiper-button-next:hover {
-  background-color: #800000; /* Bordo rəng */
-}
+  background-color: #1A1A2E; 
+} */
+/* .swiper-button-prev:hover, 
+.swiper-button-next:hover {
+  /* box-shadow: 0px 0px 6px 2px #c8e232 !important; */
+
+  /* scale: 1.5; */
+ 
 
 .swiper-button-prev:hover::after, 
 .swiper-button-next:hover::after {
-  color: #fff; /* Ağ ox */
+  color: #dde32e; 
+  font-weight:bold ;
 }
 
 /* Sol ox üçün əlavə düzəliş */
