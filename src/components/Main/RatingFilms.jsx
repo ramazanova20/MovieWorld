@@ -55,11 +55,11 @@ const RatingFilms = () => {
   return (
     <div className="bg-[#1A1A2E]">
     <div className="container lg:max-w-[1280px] mx-auto p-3">
-      <h1 className="text-xl font-bold mb-3 text-white">Rated Movies</h1>
-      <h3 className="text-lg mb-3">Selected rating: {rating} ★</h3>
+      <h1 className="text-xl font-bold mb-3 text-white italic">Rated Movies</h1>
+      <h3 className="text-lg mb-3 text-white underline">Selected rating: {rating} ★</h3>
 
       {filteredFilms.length > 0 ? (
-        <div className="flex flex-wrap gap-10 mx-auto justify-center m-1">
+        <div className="flex flex-wrap gap-10 mx-auto justify-center m-1 mb-6">
           {filteredFilms.map((film, i) => (
             <div key={i} className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 max-w-[200px] overflow-hidden shadow-lg bg-white relative mt-4 transition-transform duration-200 hover:scale-105">
               <div className="rounded-4xl bg-white pt-1.5 px-1.5 absolute top-2.5 right-2.5 shadow-[0px_0px_6px_2px_#c8e232]">

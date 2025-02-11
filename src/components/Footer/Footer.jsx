@@ -19,7 +19,6 @@ function Footer() {
             </div>
           </div>
 
-          {/* Flex əvəzinə Grid olan hissə */}
           <div className="flex flex-wrap justify-center lg:justify-between w-full gap-6 text-center lg:text-left">
             <div className="flex flex-col items-center lg:items-start">
               <h3 className="text-lg font-semibold mb-2">Category</h3>

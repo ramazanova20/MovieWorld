@@ -39,7 +39,7 @@ function CarusellMovies() {
     <div className="container lg:max-w-[1280px] mx-auto p-3">
       <div>
         <h2 className="text-center text-2xl font-bold mb-6 flex justify-between text-white">
-          7+ Reytinqli Movies
+          7+ Rated Movies
           <Link to="/topMovies" className="text-yellow-400 text-sm hover:underline">View All</Link>
         </h2>
         {filmList.length > 0 ? (
@@ -69,7 +69,7 @@ function CarusellMovies() {
             className="mySwiper"
           >
             {filmList.map((movie, index) => (
-              <SwiperSlide key={index} className="flex justify-center w-[180px] mx-auto">
+              <SwiperSlide key={index} className="flex justify-center w-[180px] mx-auto mb-4">
                 <div className="rounded-lg shadow-lg">
                 <div className="rounded-4xl bg-white pt-1.5 px-1.5 absolute top-2.5 right-2.5 shadow-[0px_0px_6px_2px_#c8e232]">
                   <button onClick={() => addToFavorites(movie)}>
@@ -126,7 +126,7 @@ function CarusellMovies() {
             className="mySwiper"
           >
             {filterFilms.map((movie, index) => (
-              <SwiperSlide key={index} className="flex justify-center w-[300px]">
+              <SwiperSlide key={index} className="flex justify-center w-[300px] mb-4">
                 <div className="rounded-lg shadow-lg relative">
                 <div className="rounded-4xl bg-white pt-1.5 px-1.5 absolute top-2.5 right-2.5 shadow-[0px_0px_6px_2px_#c8e232]">
                   <button onClick={() => addToFavorites(movie)}>

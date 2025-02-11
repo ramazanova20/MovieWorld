@@ -112,7 +112,7 @@ const CarusellShows = () => {
             className="mySwiper"
           >
             {showList.map((show, index) => (
-              <SwiperSlide key={index} className="flex justify-center w-[180px] relative">
+              <SwiperSlide key={index} className="flex justify-center w-[180px] relative mb-4">
                 <div className="rounded-4xl bg-white pt-1.5 px-1.5 absolute top-2.5 right-2.5 shadow-[0px_0px_6px_2px_#c8e232]">
                   <button onClick={() => addToFavorites(show)}>
                    <Icon/>
@@ -167,7 +167,7 @@ const CarusellShows = () => {
             className="mySwiper"
           >
             {filterShows.map((latest, index) => (
-              <SwiperSlide key={index} className="flex justify-center w-[300px] relative">
+              <SwiperSlide key={index} className="flex justify-center w-[300px] relative mb-4">
                 <div className="rounded-4xl bg-white pt-1.5 px-1.5 absolute top-2.5 right-2.5 shadow-[0px_0px_6px_2px_#c8e232]">
                   <button onClick={() => addToFavorites(latest)}>
                    <Icon/>
@@ -224,7 +224,7 @@ const CarusellShows = () => {
             className="mySwiper"
           >
             {genres.map((genre, index) => (
-              <SwiperSlide key={index} className="flex justify-center items-center w-[280px]">
+              <SwiperSlide key={index} className="flex justify-center items-center w-[280px] mb-8">
                 <div key={index} className="relative">
                   <Link to={ `/genre/${genre}`}>
                     <div className=" max-w-xs rounded-4xl hover:overflow-hidden shadow-lg hover:border-2 md:hover:border-4 hover:border-white">

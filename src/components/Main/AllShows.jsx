@@ -48,7 +48,7 @@ function AllShows() {
                   );
                 })}
               </div>
-              <div className="flex justify-center py-6">
+              <div className="flex justify-center py-6 mb-4">
           <Pagination
             current={page}
             total={showProductList.length} 

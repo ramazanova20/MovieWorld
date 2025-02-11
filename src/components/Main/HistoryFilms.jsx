@@ -54,7 +54,7 @@ const HistoryFilms = () => {
   return (
     <div className="bg-[#1A1A2E]">
     <div className="container lg:max-w-[1280px] mx-auto p-3">
-      <div className="h-full  flex justify-center">
+      <div className="h-full  flex justify-center mt-8">
         <div className="w-full md:w-full h-full  rounded-lg shadow-lg bg-white relative">
           <div className="rounded-lg text-sm p-1.5 absolute top-2.5 right-2.5 text-white shadow-[0px_0px_6px_2px_#c8e232]">
             <button className="text-white" onClick={() => addToFavorites(randomFilm)}>
