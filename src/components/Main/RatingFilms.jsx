@@ -55,7 +55,7 @@ const RatingFilms = () => {
   return (
     <div className="bg-[#1A1A2E]">
     <div className="container lg:max-w-[1280px] mx-auto p-3">
-      <h1 className="text-xl font-bold mb-3 text-white italic">Rated Movies</h1>
+      <h1 className="text-3xl font-bold text-center mb-6 text-white">Rated Movies</h1>
       <h3 className="text-lg mb-3 text-white underline">Selected rating: {rating} ★</h3>
 
       {filteredFilms.length > 0 ? (

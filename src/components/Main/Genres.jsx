@@ -67,17 +67,17 @@ const Genres = () => {
   return (
     <div className="bg-[#1A1A2E]">
     <div className="container lg:max-w-[1280px] mx-auto p-3">
-      <h1 className="text-white">Genres</h1>
+      <h1 className="text-3xl font-bold text-center mb-6 text-white">Genres</h1>
       {genres.length > 0 ? (
-        <div className="flex flex-wrap justify-center md:gap-2 lg:gap-3 xl:gap-5 2xl:gap-12 mx-auto ">
+        <div className="flex flex-wrap justify-center md:gap-2 lg:gap-3 xl:gap-5 2xl:gap-12 mx-auto mb-4">
           {genres.map((genre, index) => (
-            <div key={index} className="relative w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/5 h-32">
+            <div key={index} className="relative w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/5 h-32 max-w-xs rounded-4xl hover:overflow-hidden shadow-lg hover:border-2 md:hover:border-4 hover:border-white">
               <img
                 src={genreImages[genre] || "https://images.pexels.com/photos/9482199/pexels-photo-9482199.jpeg?auto=compress&cs=tinysrgb&w=600"}
                 alt={genre}
-                className="w-full h-full object-cover"
+                className="w-full h-full"
               />
-              <div className="absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center text-black font-bold text-xl p-2">
+              <div className="absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center text-yellow-300 font-bold text-xl p-2">
                 <Link to={`/genre/${genre}`} className="text-center bg-black/50 md:w-40">{genre}</Link>
               </div>
             </div>

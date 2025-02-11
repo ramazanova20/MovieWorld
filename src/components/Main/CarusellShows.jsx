@@ -225,7 +225,7 @@ const CarusellShows = () => {
           >
             {genres.map((genre, index) => (
               <SwiperSlide key={index} className="flex justify-center items-center w-[280px] mb-8">
-                <div key={index} className="relative">
+                <div key={index} className="relative max-w-xs rounded-4xl hover:overflow-hidden shadow-lg hover:border-2 md:hover:border-4 hover:border-white">
                   <Link to={ `/genre/${genre}`}>
                     <div className=" max-w-xs rounded-4xl hover:overflow-hidden shadow-lg hover:border-2 md:hover:border-4 hover:border-white">
                       <img src={genreImages[genre] || "https://images.pexels.com/photos/5435459/pexels-photo-5435459.jpeg?auto=compress&cs=tinysrgb&w=600"}

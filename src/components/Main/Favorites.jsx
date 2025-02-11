@@ -9,7 +9,7 @@ function Favorites() {
   return (
     <div className="bg-[#1A1A2E]">
     <div className="container lg:max-w-[1280px] mx-auto p-4">
-      <h1 className="text-2xl font-bold mb-4 uppercase italic text-white">Favorite TV shows and Movies</h1>
+      <h1 className="text-3xl font-bold text-center mb-6 text-white">Favorite TV shows and Movies</h1>
       {favorites.length === 0 ? (
         <div className="text-center py-24">
           <img

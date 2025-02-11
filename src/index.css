@@ -9,7 +9,7 @@
   }
   
   body {
-    /* background: #eee; */
+    
     font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 14px;
     color: #000;
@@ -27,7 +27,7 @@
     font-size: 18px;
     background: #fff;
   
-    /* Center slide text vertically */
+    
     display: flex;
     justify-content: center;
     align-items: center;
@@ -47,7 +47,7 @@
     font-variant: initial;
     line-height: 1;
 } */
- /* Oxları ümumi stil */
+ 
 .swiper-button-prev, .swiper-button-next {
   position: absolute;
   /* top: 100%;
@@ -63,14 +63,14 @@
   transition: all 0.5s ease-in-out;
 }
 
-/* Ox ikonu */
+
 .swiper-button-prev::after, 
 .swiper-button-next::after {
   font-size: 14px !important; 
-  color: #dde32e; /* Bordo rəng */
+  color: #dde32e; 
 }
 
-/* Hover effekti */
+
 /* .swiper-button-prev:hover, 
 .swiper-button-next:hover {
   background-color: #1A1A2E; 
@@ -88,16 +88,38 @@
   font-weight:bold ;
 }
 
-/* Sol ox üçün əlavə düzəliş */
+
 .swiper-button-prev {
   left: 10px;
 }
 
-/* Sağ ox üçün əlavə düzəliş */
+
 .swiper-button-next {
   right: 10px;
 }
+.custom-pagination .ant-pagination-prev .anticon,
+.custom-pagination .ant-pagination-next .anticon {
+  color: white !important;
+}
 
+.custom-pagination .ant-pagination-prev svg,
+.custom-pagination .ant-pagination-next svg {
+  fill: white !important;
+}
+.ant-pagination-item-ellipsis {
+  color: white !important;
+}
+.ant-pagination-prev:hover .anticon,
+.ant-pagination-next:hover .anticon {
+  font-weight: bold;
+  transform: scale(1.2); 
+}
+
+
+.ant-pagination-prev:hover svg,
+.ant-pagination-next:hover svg {
+  fill: white !important;
+}
 @media (max-width: 640px) {
   .ant-pagination-prev,
   .ant-pagination-next {

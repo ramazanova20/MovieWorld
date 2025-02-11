@@ -27,6 +27,7 @@ function AllMovies() {
   return (
     <div className="bg-[#1A1A2E]">
       <div className="container lg:max-w-[1280px] mx-auto p-3">
+        <h1 className="text-3xl font-bold text-center mb-6 text-white">All Movies List</h1>
         <div className="flex flex-wrap gap-10 justify-center">
               {paginatedInfo.map((item) => {
                 return (
