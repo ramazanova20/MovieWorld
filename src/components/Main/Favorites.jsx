@@ -27,11 +27,11 @@ function Favorites() {
         </div>
       ) : (
         <>
-          <div className="flex flex-wrap gap-6 mb-6">
+          <div className="flex flex-wrap gap-10 py-24">
             {favorites.map((item) => (
               <div
                 key={item.id}
-                className="max-w-[200px] overflow-hidden shadow-lg bg-white relative flex flex-col transition-transform duration-200 hover:scale-105"
+                className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 max-w-[200px] overflow-hidden shadow-lg bg-white relative flex flex-col transition-transform duration-200 hover:scale-105"
               >
                 <div className=" text-sm p-1.5 absolute top-2.5 right-2.5">
                   <button onClick={() => removeFromFavorites(item.id)}>
@@ -41,7 +41,7 @@ function Favorites() {
                 <Link to={item.type === "movie" ? `/film/${item.id}` : `/show/${item.id}`}>
                   <div className=" max-w-xs rounded-4xl hover:overflow-hidden shadow-lg hover:border-2 md:hover:border-4 hover:border-white">
                     <img
-                      className="h-full w-full"
+                      className="h-auto w-full"
                       src={item.image?.medium || item.medium_cover_image || "https://images.pexels.com/photos/3131971/pexels-photo-3131971.jpeg?auto=compress&cs=tinysrgb&w=600"}
                       alt={item.name || item.title}
                     />

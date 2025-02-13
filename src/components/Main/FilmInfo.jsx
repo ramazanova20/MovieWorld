@@ -6,11 +6,12 @@ import { useAllDataContext } from "../../context/AllDataContext";
 import { Link } from "react-router-dom";
 import "../../index.css";
 import Loading from "./Loading";
+import Icon from "./Icon";
 
 function FilmInfo() {
     const { id } = useParams(); 
     const [movie, setMovie] = useState(null);
-    const { moviedata,ad } = useAllDataContext(); 
+    const { moviedata,addToFavorites} = useAllDataContext(); 
 
     
     const [page, setPage] = useState(1);
@@ -39,6 +40,11 @@ function FilmInfo() {
         <div className="container lg:max-w-[1280px] mx-auto p-4">
             <div className="flex flex-col md:flex-row items-center md:items-start gap-10">
                 <div className="w-full md:w-full relative">
+                    <div className="rounded-4xl bg-white pt-1.5 px-1.5 absolute top-2.5 right-2.5 shadow-md z-10">
+                      <button onClick={() => addToFavorites(movie)}>
+                       <Icon/>
+                      </button>
+                    </div>
                     <img
                         className="h-full w-full object-contain"
                         src={movie.background_image_original || "https://images.pexels.com/photos/1117132/pexels-photo-1117132.jpeg?auto=compress&cs=tinysrgb&w=600"}
@@ -59,7 +65,12 @@ function FilmInfo() {
                 <h1 className="uppercase italic text-2xl font-bold mb-4 text-white">Movies</h1>
                 <div className="flex flex-wrap gap-10 mx-auto justify-center m-1">
                     {paginatedInfo.map((item, i) => (
-                        <div key={i} className="w-[180px] shadow-lg bg-white">
+                        <div key={i} className="w-[180px] shadow-lg bg-white relative">
+                            <div className="rounded-4xl bg-white pt-1.5 px-1.5 absolute top-2.5 right-2.5 shadow-[0px_0px_6px_2px_#c8e232]">
+                              <button onClick={() => addToFavorite(item)}>
+                               <Icon/>
+                              </button>
+                            </div>
                             <Link to={`/film/${item.id}`}>
                                 <div className="max-w-xs rounded-4xl hover:overflow-hidden shadow-lg hover:border-2 md:hover:border-4 hover:border-white">
                                     <img

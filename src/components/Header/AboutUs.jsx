@@ -12,20 +12,20 @@ const AboutUs = () => {
         </p>
       </section>
 
-       <div className="flex flex-col md:flex-row justify-evenly">
-            <section className="text-white py-12 ">
-              <h2 className="text-3xl font-bold mb-4 text-center md:text-left hover:text-yellow-400">Our Design Approach</h2>
-              <ul className="md:list-disc pl-6 space-y-2 text-lg/7 text-center md:text-left">
-                <li>Dark-themed UI for a cinematic experience.</li>
-                <li>Minimalist layout for clear navigation.</li>
-                <li>Responsive design for all devices.</li>
-                <li>Hover effects & animations for an engaging UX.</li>
-                <li>Consistent typography & color palette.</li>
-              </ul>
-            </section>
-            <div className=" md:w-[50%]">
-              <img src="https://images.pexels.com/photos/4164418/pexels-photo-4164418.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="" />
-            </div>
+      <div className="flex flex-col md:flex-row justify-evenly">
+        <section className="text-white py-12 ">
+          <h2 className="text-3xl font-bold mb-4 text-center md:text-left hover:text-yellow-400">Our Design Approach</h2>
+          <ul className="md:list-disc pl-6 space-y-2 text-lg/7 text-center md:text-left">
+            <li>Dark-themed UI for a cinematic experience.</li>
+            <li>Minimalist layout for clear navigation.</li>
+            <li>Responsive design for all devices.</li>
+            <li>Hover effects & animations for an engaging UX.</li>
+            <li>Consistent typography & color palette.</li>
+          </ul>
+        </section>
+        <div className=" md:w-[50%]">
+          <img src="https://images.pexels.com/photos/4164418/pexels-photo-4164418.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="" />
+        </div>
       </div>
 
       <div className="flex flex-col md:flex-row justify-evenly mt-40 mb-40">
