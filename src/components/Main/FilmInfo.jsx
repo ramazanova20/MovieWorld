@@ -13,7 +13,9 @@ function FilmInfo() {
     const [movie, setMovie] = useState(null);
     const { moviedata,addToFavorites} = useAllDataContext(); 
 
-    
+    const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    };
     const [page, setPage] = useState(1);
     const pageSize = 15; 
 
@@ -71,7 +73,7 @@ function FilmInfo() {
                                <Icon/>
                               </button>
                             </div>
-                            <Link to={`/film/${item.id}`}>
+                            <Link to={`/film/${item.id}`} onClick={scrollToTop}>
                                 <div className="max-w-xs rounded-4xl hover:overflow-hidden shadow-lg hover:border-2 md:hover:border-4 hover:border-white">
                                     <img
                                         className="w-full h-full"
@@ -83,8 +85,6 @@ function FilmInfo() {
                         </div>
                     ))}
                 </div>
-
-                
                 <div className="flex justify-center py-6">
                     <Pagination
                         current={page}

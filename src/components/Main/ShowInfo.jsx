@@ -49,7 +49,9 @@ function ShowInfo() {
     }
   }, [data]);
 
-
+  const scrollToTop = () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+  };
   const startIndex = (page - 1) * pageSize;
   const endIndex = startIndex + pageSize;
   const paginatedInfo = (data || []).slice(startIndex, endIndex);
@@ -102,7 +104,7 @@ function ShowInfo() {
                  <Icon/>
                 </button>
               </div>
-              <Link to={`/show/${item.id}`}>
+              <Link to={`/show/${item.id}`}  onClick={scrollToTop}>
                 <div className="max-w-xs rounded-4xl hover:overflow-hidden shadow-lg hover:border-2 md:hover:border-4 hover:border-white">
                   <img
                     className="w-full h-full"
