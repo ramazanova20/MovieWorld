@@ -45,8 +45,8 @@ function DataContextProvider({ children }) {
 
   useEffect(() => {
     getMovieData().then((res) => {
-      console.log("Fetched Movies:", res); // Console-da baxmaq üçün
-      setMovieData(res); // Əsasən res.data.movies-lə işləmək lazımdır
+      console.log("Fetched Movies:", res); 
+      setMovieData(res); 
     });
   }, []);
   return (

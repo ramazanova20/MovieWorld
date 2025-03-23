@@ -58,7 +58,7 @@ function ShowInfo() {
 
   if (!product) {
     return (
-      <div className="container lg:max-w-[1280px] mx-auto p-3">
+      <div>
        <Loading/>
       </div>
     );  
@@ -70,7 +70,7 @@ function ShowInfo() {
       <div className="flex flex-col md:flex-row items-center md:items-start gap-6">
         <div className="w-full md:w-full relative">
           <div className="rounded-4xl bg-white pt-1.5 px-1.5 absolute top-2.5 right-2.5 shadow-[0px_0px_6px_2px_#c8e232]">
-            <button onClick={() => addToFavorite(item)}>
+            <button onClick={() => addToFavorites(product)}>
              <Icon/>
             </button>
           </div>
